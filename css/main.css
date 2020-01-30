@@ -1,0 +1,86 @@
+html, body, h1, p{
+    padding: 0;
+    margin: 0;
+}
+
+#homeLogo{
+    background-image: url('/img/chip.svg');
+    width: 3em;
+    height: 3em;
+    margin: 2em;
+    cursor: pointer;
+}
+
+header{
+    padding: 0;
+    margin: 0;
+    background: white;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#topNavigation{
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin: 0;
+}
+
+#topNavigation > ul{
+    padding: 0;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+}
+
+#topNavigation >ul> li{
+    width: 5em;
+    text-align: center;
+    padding: 2em;
+    text-decoration: none;
+    list-style-type: none;
+    cursor: pointer;
+    transition-duration: 500ms;
+}
+
+#topNavigation >ul> li:hover{
+    background: lightblue;
+}
+
+#headerCover{
+    height: 50em;
+    width: 100%;
+    background: lightblue url('/img/dims.jpeg') no-repeat;
+    background-size: cover;
+
+}
+
+#colorLayer{
+    position: relative;
+    left: 0;
+    width: 100%;
+    height: 50em;
+    background-color: rgba(66,135,245, 0.3);
+}
+
+#about{
+    background-color: lightgrey;
+    min-height: 40em;
+}
+
+#AI{
+    background-color: white;
+    min-height: 40em;
+    width: 100%;
+    text-align: center;
+    margin:0 auto;
+}
+
+#bottomNavigation > ul > li{
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+}
