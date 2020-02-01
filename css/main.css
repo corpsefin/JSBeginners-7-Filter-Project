@@ -1,6 +1,12 @@
 html, body, h1, p{
     padding: 0;
     margin: 0;
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+}
+
+li{
+    list-style-type: none;
 }
 
 #homeLogo{
@@ -58,6 +64,18 @@ header{
 
 }
 
+.welcome{
+    position: relative;
+    top: 7rem;
+    font-size: 2em;
+    color: white;
+    text-align: center;
+}
+
+#welcomeHead{
+    font-size:5em;
+}
+
 #colorLayer{
     position: relative;
     left: 0;
@@ -73,14 +91,88 @@ header{
 
 #AI{
     background-color: white;
-    min-height: 40em;
     width: 100%;
     text-align: center;
     margin:0 auto;
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: auto;
+    align-items: center;
+}
+
+#AI > ul{
+    display: grid;
+    grid-template-columns: repeat(4,15rem);
+    grid-template-rows: repeat(1, 15rem);
+    width: fit-content;
+    height: auto;
+    justify-content: center;
+    grid-gap: 1em;
+}
+
+#AI > ul > li{
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    color: black;
+    cursor: pointer;
+}
+
+#create{
+    margin: auto;
+    display: none;
+}
+
+#filter{
+    margin: auto;
+}
+
+#filter > ul{
+    display: flex;
+    margin: auto;
+    text-align: center;
+    flex-direction: row;
+}
+
+#searchbar{
+    border: 1px solid black;
+    border-radius: 0.4em;
+    padding: 0.1em 0.5em;
+    vertical-align: middle;
+    margin: auto;
+}
+
+#searchInput{
+    border: none;
+    margin: auto;
+}
+
+#test{
+    display: inline;
+    margin: auto;
+}
+
+#test > img{
+    height: 1.2rem;
+    cursor: pointer;
+    margin: auto;
+}
+
+#test:hover{
+    background-color: lightgray;
+    height: 100%;
 }
 
 #bottomNavigation > ul > li{
     display: flex;
     flex-direction: column;
     list-style-type: none;
+}
+
+#footer{
+    background-color: lightgray;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
 }
