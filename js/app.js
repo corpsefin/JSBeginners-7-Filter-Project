@@ -3,6 +3,7 @@ import AI from './AI.js';
 (function(){
     let aiList = document.getElementById('AIList');
     let create = document.getElementById('create');
+    let searchButton = document.getElementById('test');
     let buttonVisible = false;
 
     document.onload = function(){
@@ -18,7 +19,7 @@ import AI from './AI.js';
 
     document.addEventListener('keydown', (e)=>{
         if(e.keyCode == 70){
-            console.log("nappi")
+            //console.log("nappi")
             hideCreateButton();
         }
     });
@@ -48,6 +49,20 @@ import AI from './AI.js';
             
         render(ai);
     }
+
+    function search(){
+        let searchInput = document.getElementById('searchInput');
+        let ais = JSON.parse(localStorage.getItem('AIs'));
+
+        ais.filter((item)=>{
+            item.type.toLowerCase().includes(searchInput.value.toLowerCase()) ? 
+            aiList.children[ais.indexOf(item)].style.display = 'flex' : aiList.children[ais.indexOf(item)].style.display = 'none';
+        })
+        searchInput.value = '';
+    }
+
+    searchButton.addEventListener('click',search);
+
 
     function render(ai){
         let aiItem = document.createElement('li');

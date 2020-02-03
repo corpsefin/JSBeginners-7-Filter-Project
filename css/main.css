@@ -1,20 +1,20 @@
-html, body, h1, p{
+html, body, footer, ul, nav{
     padding: 0;
     margin: 0;
+}
+
+html{
     font-family: 'Lato', sans-serif;
     text-align: center;
+
 }
 
-li{
-    list-style-type: none;
+a{
+    text-decoration: none;
 }
 
-#homeLogo{
-    background-image: url('/img/chip.svg');
-    width: 3em;
-    height: 3em;
-    margin: 2em;
-    cursor: pointer;
+a:visited{
+    color: black;
 }
 
 header{
@@ -26,6 +26,25 @@ header{
     flex-direction: row;
     justify-content: space-between;
 }
+
+li{
+    list-style-type: none;
+}
+
+footer{
+    width: 100%;
+    background: yellow;
+}
+
+#homeLogo{
+    background-image: url('/img/chip.svg');
+    width: 3em;
+    height: 3em;
+    margin: 2em;
+    cursor: pointer;
+}
+
+
 
 #topNavigation{
     display: flex;
@@ -87,13 +106,14 @@ header{
 #about{
     background-color: lightgrey;
     min-height: 40em;
+    padding: 2em 15em;
 }
 
 #AI{
     background-color: white;
     width: 100%;
     text-align: center;
-    margin:0 auto;
+    margin:2em auto;
     display: grid;
     grid-template-rows: auto auto;
     grid-template-columns: auto;
@@ -139,6 +159,7 @@ header{
     border-radius: 0.4em;
     padding: 0.1em 0.5em;
     vertical-align: middle;
+    display: flex;
     margin: auto;
 }
 
@@ -150,16 +171,17 @@ header{
 #test{
     display: inline;
     margin: auto;
+    border: none;
 }
 
 #test > img{
     height: 1.2rem;
     cursor: pointer;
     margin: auto;
+
 }
 
 #test:hover{
-    background-color: lightgray;
     height: 100%;
 }
 
@@ -172,7 +194,7 @@ header{
 #footer{
     background-color: lightgray;
     margin: 0;
-    padding: 0;
+    padding: 2em 0;
     height: 100%;
     width: 100%;
 }
